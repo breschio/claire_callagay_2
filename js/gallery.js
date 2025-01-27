@@ -81,5 +81,38 @@ class Gallery {
 
 // Initialize gallery when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new Gallery();
+  const images = document.querySelectorAll('.gallery-image');
+  const totalImagesPerCategory = 5;
+  let currentIndex = 0;
+  let isShowingLandscape = true; // Track which category we're showing
+
+  function showImage(index, isLandscape) {
+    const category = isLandscape ? 'landscape' : 'lifestyle';
+    images.forEach(image => {
+      image.classList.remove('active');
+      if (image.dataset.category === category) {
+        const imageIndex = Array.from(images)
+          .filter(img => img.dataset.category === category)
+          .indexOf(image);
+        if (imageIndex === index) {
+          image.classList.add('active');
+        }
+      }
+    });
+  }
+
+  function nextImage() {
+    // Switch category every time
+    isShowingLandscape = !isShowingLandscape;
+    
+    // Only increment index when we complete a full cycle (both categories shown)
+    if (isShowingLandscape) {
+      currentIndex = (currentIndex + 1) % totalImagesPerCategory;
+    }
+    
+    showImage(currentIndex, isShowingLandscape);
+  }
+
+  // Start the slideshow
+  setInterval(nextImage, 3000);
 }); 
