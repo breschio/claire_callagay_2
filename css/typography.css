@@ -1,0 +1,13 @@
+/* Heading: Cormorant Garamond */
+.type-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* Body: Lato */
+.type-body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+} 
