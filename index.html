@@ -10,72 +10,58 @@
     <script src="js/app.js" defer></script>
     <script src="js/gallery.js" defer></script>
     <script src="js/menu.js" defer></script>
+    <script src="js/components.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 <body class="theme-light">
-    <nav class="nav">
-        <button class="nav-toggle" aria-label="Toggle Navigation">
-            <span class="nav-line"></span>
-        </button>
-    </nav>
-
-    <div class="mobile-menu">
-        <nav class="menu-content">
-            <ul class="menu-list type-body">
-                <li><a href="landscape.html">Landscape</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-            <button class="mode-toggle type-body">Mode</button>
-        </nav>
-    </div>
-
-    <main class="home">
-        <div class="gallery-container">
-            <!-- Landscape Images -->
-            <div class="gallery-image active" data-category="landscape">
-                <img src="images/landscape/landscape-1.jpg" alt="Martha's Vineyard landscape">
-            </div>
-            <div class="gallery-image" data-category="landscape">
-                <img src="images/landscape/landscape-2.jpg" alt="Martha's Vineyard landscape">
-            </div>
-            <div class="gallery-image" data-category="landscape">
-                <img src="images/landscape/landscape-3.jpg" alt="Martha's Vineyard landscape">
-            </div>
-            <div class="gallery-image" data-category="landscape">
-                <img src="images/landscape/landscape-4.jpg" alt="Martha's Vineyard landscape">
-            </div>
-            <div class="gallery-image" data-category="landscape">
-                <img src="images/landscape/landscape-5.jpg" alt="Martha's Vineyard landscape">
-            </div>
-            <div class="gallery-image" data-category="landscape">
-                <img src="images/landscape/landscape-6.jpg" alt="Martha's Vineyard landscape">
-            </div>
-
-            <!-- Lifestyle Images -->
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-1.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-2.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-3.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-4.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-5.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-            <div class="gallery-image" data-category="lifestyle">
-                <img src="images/lifestyle/lifestyle-6.jpg" alt="Martha's Vineyard lifestyle">
-            </div>
-        </div>
-        
+    <div class="container">
         <div class="gallery-info">
-            <h1 class="type-heading">Claire Callagy</h1>
+            <h1 class="type-heading"><a href="index.html">Claire Callagy</a></h1>
         </div>
-    </main>
+
+        <main class="home">
+            <div class="gallery-container">
+                <!-- Landscape Images -->
+                <div class="gallery-image active" data-category="landscape">
+                    <img src="images/landscape/landscape-1.jpg" alt="Martha's Vineyard landscape">
+                </div>
+                <div class="gallery-image" data-category="landscape">
+                    <img src="images/landscape/landscape-2.jpg" alt="Martha's Vineyard landscape">
+                </div>
+                <div class="gallery-image" data-category="landscape">
+                    <img src="images/landscape/landscape-3.jpg" alt="Martha's Vineyard landscape">
+                </div>
+                <div class="gallery-image" data-category="landscape">
+                    <img src="images/landscape/landscape-4.jpg" alt="Martha's Vineyard landscape">
+                </div>
+                <div class="gallery-image" data-category="landscape">
+                    <img src="images/landscape/landscape-5.jpg" alt="Martha's Vineyard landscape">
+                </div>
+                <div class="gallery-image" data-category="landscape">
+                    <img src="images/landscape/landscape-6.jpg" alt="Martha's Vineyard landscape">
+                </div>
+
+                <!-- Lifestyle Images -->
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-1.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-2.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-3.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-4.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-5.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+                <div class="gallery-image" data-category="lifestyle">
+                    <img src="images/lifestyle/lifestyle-6.jpg" alt="Martha's Vineyard lifestyle">
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html> 
