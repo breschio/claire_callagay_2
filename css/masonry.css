@@ -1,12 +1,13 @@
 .masonry-layout {
   padding: 9rem 0rem 0.5rem;
-  columns: 2;
-  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .masonry-item img {
@@ -16,15 +17,9 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .masonry-layout {
-    padding: 10rem 0rem 1.5rem;
-    columns: 3;
-    column-gap: 1rem;
-  }
-
-  .masonry-item {
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
