@@ -1,0 +1,154 @@
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-paper);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-medium),
+              visibility var(--transition-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.theme-dark .lightbox {
+  background-color: var(--color-dark);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: opacity var(--transition-medium);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity var(--transition-medium);
+  z-index: 1010;
+}
+
+.lightbox-close .lnr {
+  font-size: 32px;
+  color: var(--color-ink);
+  opacity: 0.7;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.lightbox-close:hover .lnr {
+  opacity: 1;
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 144px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity var(--transition-medium);
+  z-index: 1010;
+}
+
+.lightbox-nav .lnr {
+  font-size: 32px;
+  color: var(--color-ink);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-nav:hover {
+  opacity: 1;
+}
+
+.lightbox-nav:hover .lnr {
+  opacity: 1;
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+/* Hide navigation buttons on mobile */
+@media (max-width: 768px) {
+  .lightbox-nav {
+    display: none;
+  }
+  
+  .lightbox-image {
+    max-width: 100%;
+    max-height: 100vh;
+  }
+}
+
+/* Add these styles for the dots container */
+.lightbox-dots {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1010;
+}
+
+.lightbox-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-ink);
+  opacity: 0.3;
+  transition: opacity var(--transition-medium);
+}
+
+.lightbox-dot.active {
+  opacity: 0.7;
+}
+
+body.theme-dark .lightbox-dot {
+  background-color: var(--color-light);
+} 

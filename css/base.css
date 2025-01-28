@@ -166,6 +166,7 @@ body.theme-dark .nav-line::after {
   width: auto;
   height: auto;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .gallery-info,
@@ -407,4 +408,16 @@ body.page-loaded .home {
     color: inherit;
     background-color: transparent;
   }
+}
+
+.masonry-item img {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.masonry-item img,
+.gallery-image img {
+  cursor: pointer;
 } 
