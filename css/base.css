@@ -52,10 +52,22 @@ body.theme-dark {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .nav-toggle:hover {
   opacity: 1;
+}
+
+.nav-toggle:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle * {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-line {
