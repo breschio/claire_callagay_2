@@ -39,6 +39,7 @@ body.theme-dark {
   top: 2rem;
   right: 2rem;
   z-index: 100;
+  color: inherit;
 }
 
 .nav-toggle {
@@ -48,6 +49,7 @@ body.theme-dark {
   cursor: pointer;
   opacity: 0.8;
   transition: opacity var(--transition-medium);
+  
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -55,18 +57,24 @@ body.theme-dark {
   outline: none;
   appearance: none;
   -webkit-appearance: none;
+  
+  color: inherit;
+  background-color: transparent;
 }
 
-.nav-toggle:hover {
+.nav-toggle:hover,
+.nav-toggle:focus,
+.nav-toggle:active {
   opacity: 1;
-}
-
-.nav-toggle:focus {
   outline: none;
+  color: inherit;
+  background-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle * {
+  color: inherit;
+  background-color: currentColor;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -74,8 +82,7 @@ body.theme-dark {
   display: block;
   width: 24px;
   height: 1px;
-  background-color: currentColor;
-  position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-line::before,
@@ -84,8 +91,7 @@ body.theme-dark {
   position: absolute;
   width: 24px;
   height: 1px;
-  background-color: currentColor;
-  transition: transform var(--transition-medium);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-line::before {
@@ -384,4 +390,13 @@ body.page-loaded .home {
 
 .masonry-item.loaded {
   opacity: 1;
+}
+
+/* Specific iOS active state handling */
+@media (hover: none) {
+  .nav-toggle:active {
+    opacity: 1;
+    color: inherit;
+    background-color: transparent;
+  }
 } 
