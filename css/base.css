@@ -82,7 +82,8 @@ body.theme-dark {
   display: block;
   width: 24px;
   height: 1px;
-  -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-ink);
+  position: relative;
 }
 
 .nav-line::before,
@@ -91,7 +92,8 @@ body.theme-dark {
   position: absolute;
   width: 24px;
   height: 1px;
-  -webkit-tap-highlight-color: transparent;
+  background-color: var(--color-ink);
+  transition: transform var(--transition-medium);
 }
 
 .nav-line::before {
@@ -100,6 +102,12 @@ body.theme-dark {
 
 .nav-line::after {
   bottom: -6px;
+}
+
+body.theme-dark .nav-line,
+body.theme-dark .nav-line::before,
+body.theme-dark .nav-line::after {
+  background-color: var(--color-light);
 }
 
 .home {
