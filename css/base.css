@@ -48,6 +48,10 @@ body.theme-dark {
   cursor: pointer;
   opacity: 0.8;
   transition: opacity var(--transition-medium);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .nav-toggle:hover {
@@ -214,6 +218,33 @@ body.theme-dark .mobile-menu {
 
 .menu-list li {
   margin: 2.5rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-medium),
+              transform var(--transition-medium);
+}
+
+/* Add sequential delays for menu items */
+.mobile-menu.is-open .menu-list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.mobile-menu.is-open .menu-list li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.mobile-menu.is-open .menu-list li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.mobile-menu.is-open .menu-list li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Show menu items when menu is open */
+.mobile-menu.is-open .menu-list li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-list a {
