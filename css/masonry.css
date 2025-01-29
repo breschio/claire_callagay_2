@@ -1,7 +1,7 @@
 .masonry-layout {
   padding: 9rem 0rem 0.5rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
 
@@ -17,18 +17,19 @@
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .masonry-layout {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .masonry-layout {
     padding: 10rem 0rem 2rem;
-    columns: 3;
-    column-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
   }
 
   .masonry-item {
@@ -39,9 +40,11 @@
 /* Large Desktop */
 @media (min-width: 1440px) {
   .masonry-layout {
-    columns: 3;
+    grid-template-columns: repeat(3, 1fr);
     max-width: 1800px;
     margin: 0 auto;
-    padding: 10rem 0rem 3rem;
+    padding: 10rem 0rem 2rem;
+    column-gap: 2rem;
+    gap: 2rem;
   }
 } 
