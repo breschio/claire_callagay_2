@@ -49,15 +49,6 @@ body.theme-dark {
   cursor: pointer;
   opacity: 0.8;
   transition: opacity var(--transition-medium);
-  
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  
   color: inherit;
   background-color: transparent;
 }
@@ -181,6 +172,8 @@ body.theme-dark .nav-line::after {
   position: fixed;
   z-index: 10;
   text-align: left;
+  mix-blend-mode: difference;
+  color: white;
 }
 
 .gallery-info {
@@ -435,12 +428,14 @@ body.page-loaded .home {
   position: fixed;
   bottom: 0;
   left: 2rem;
-  z-index: 10;
+  z-index: 1;
   font-family: "Lato", sans-serif;
   font-size: 0.75rem;
   opacity: 0.7;
   pointer-events: none;
   background: none;
+  mix-blend-mode: difference;
+  color: white;
 }
 
 .site-footer p {
@@ -462,5 +457,32 @@ body.lightbox-open .site-footer {
 
 /* Dark mode footer styles */
 body.theme-dark .site-footer {
-  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+/* Update header styles */
+.gallery-info,
+.page-header {
+  position: fixed;
+  z-index: 10;
+  text-align: left;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+/* Update nav toggle */
+.nav-toggle {
+  mix-blend-mode: difference;
+}
+
+.nav-line,
+.nav-line::before,
+.nav-line::after {
+  background-color: var(--color-ink);
+}
+
+/* Update footer styles */
+.site-footer {
+  mix-blend-mode: difference;
+  color: white;
 } 

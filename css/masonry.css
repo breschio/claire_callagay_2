@@ -3,17 +3,22 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+  margin-bottom: 100px;
 }
 
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .masonry-item img {
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 /* Tablet */
@@ -30,6 +35,7 @@
     padding: 10rem 0rem 2rem;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    margin-bottom: 100px;
   }
 
   .masonry-item {
@@ -43,6 +49,7 @@
     grid-template-columns: repeat(3, 1fr);
     max-width: 1800px;
     margin: 0 auto;
+    margin-bottom: 100px;
     padding: 10rem 0rem 2rem;
     column-gap: 2rem;
     gap: 2rem;
